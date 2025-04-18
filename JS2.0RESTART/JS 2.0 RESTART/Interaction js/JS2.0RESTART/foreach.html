@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach Example</title>
+</head>
+
+<body>
+    <select id="branch">
+        <option value=" select">select</option>
+    </select>
+    </script>
+</body>
+<script>
+
+    arr = ['html', 'css', 'javascript', 'bootstrap', 'jquery', 'react js '];
+
+    arr.forEach(val => {
+        const opt = document.createElement('option');
+        opt.textContent = val;
+        opt.value = val;
+        document.getElementById('branch').appendChild(opt);
+    })
+</script>
+
+</html>

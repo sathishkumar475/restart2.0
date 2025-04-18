@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function with Arbitrary Arguments</title>
+</head>
+<body>
+    <script>
+
+        //Spread Operator (...args anywise example)//
+        function sumAll(...args) {
+            let sum = 0;
+            for (let arg of args) {
+                sum += arg;
+            }
+            return sum;
+        } 
+
+
+        
+        console.log(sumAll(1, 2, 3)); // Output: 6
+        console.log(sumAll(10, 20, 30, 40)); // Output: 100
+
+
+        function sum( ){
+            let total=0;
+            for(let i=0;i<arguments.length;i++){
+                total+=arguments[i];
+        }
+        return total;
+    }
+
+    console.log(sum(4,5));
+    
+    </script>
+</body>
+</html>

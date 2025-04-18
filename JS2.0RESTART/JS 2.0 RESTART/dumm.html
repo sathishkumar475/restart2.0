@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat praesentium maxime, laudantium quas tempora
+        voluptate excepturi eaque ratione explicabo, deserunt enim quae adipisci eos, iure perspiciatis. Natus assumenda
+        aut fugiat.</h2>
+    <p id="Demo">That is grade</p>
+</body>
+<script>
+
+    // let number = 0;
+    // if (number < 0) {
+    //     console.log(" this number is nagativity");
+
+    // }
+
+    // else if (number > 0) {
+    //     console.log(" this number is possitive ");
+
+    // }
+
+    // else {
+    //     console.log("zero this number ");
+
+    // }
+
+
+    let avg = prompt(" Please search your Grade :");
+
+    if (avg != null && avg >= 90 && avg <= 100) {
+
+        console.log(" This Grade : A");
+
+
+    }
+    else if (avg >= 80 && avg <= 89) {
+        console.log(" This Grade : B");
+
+    }
+    else if (avg >= 79 && avg <= 70) {
+        console.log(" This Grade : C");
+
+    }
+
+    else {
+        console.log("This grade : " + avg);
+        document.getElementById("Demo").innerHTML = (" This grade : D") + avg;
+
+
+    }
+</script>
+
+</html>

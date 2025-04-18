@@ -1,0 +1,15 @@
+<script>
+
+let obj = {
+    a: 100,
+    fun1() {
+        let a = 20;
+        let fun2 = () => {
+            console.log(this.a);
+        }
+        fun2();
+    }
+}
+
+obj.fun1();
+</script>

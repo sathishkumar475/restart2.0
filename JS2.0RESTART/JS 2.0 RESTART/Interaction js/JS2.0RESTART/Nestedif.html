@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested </title>
+</head>
+
+<body>
+    <h2 style="text-align: center; color: brown; font-size: 100px; ">NESTED IF STATEMENT </h2>
+    <p>Greate mini syntax..</p>
+    <p>Min Mark =35
+        lowest marl 35 below </p>
+
+</body>
+<script>
+    let Tamil = 65, English = 88, Maths = 35, Science = 65;
+    let total, avg;
+    total = Tamil + English + Maths + Science;
+    avg = total / 4;
+    console.log(" Total  : ", total);
+    console.log("Average :", avg);
+
+    if (Tamil >= 35 && English >= 35 && Maths >= 35 && Science >= 35) {
+        console.log(" Result : Pass ");
+        if (avg > 90 && avg <= 100) {
+            console.log(" Grade  : A");
+
+        }
+        else if (avg > 80 && avg <= 70) {
+            console.log(" Grade  : B");
+
+        }
+        else if (avg > 70 && avg <= 60) {
+            console.log(" Grade : C");
+
+        }
+        else {
+            console.log(" Grade : D");
+
+        }
+    }
+    else {
+        console.log(" Result : Fail");
+        console.log(" Grade  : No Grade ");
+
+
+    }
+
+
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Arrow function </h2>
+<p id="demo"></p>
+
+    <script>
+
+        // sysntax of arrow function 
+        // const Sathish=(If it all any name )=>{return value }//
+
+        const Sathish = (a, b) => {
+            return a + b;
+        }
+
+        console.log(Sathish(8, 8));
+
+
+        //Arrow function with map() metthod//
+
+        const number = [1, 2, 3, 4, 5];
+        console.log(number);
+        const doublenumbers = number.map(number => number * 2);
+        console.log(doublenumbers);
+
+
+        //Arrow function array with  object  map() metthod //
+        const user = [
+            { firstName: "Sathish", lastName: " Kumar" },
+            { firstName: " Rajan ", lastName: " Siva" }
+        ];
+
+        const fullname = user.map(user => `${user.firstName} ${user.lastName}`);
+        console.table(fullname)
+        console.log(fullname);
+
+        document.getElementById("demo").innerHTML=fullname;
+        
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    header {
+        background: #35424a;
+        color: #ffffff;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    section {
+        padding: 20px;
+        margin: 20px;
+        background: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .project {
+        margin-bottom: 20px;
+    }
+
+    .project h2 {
+        color: #35424a;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px 0;
+        background: #35424a;
+        color: #ffffff;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi! I'm a web developer with a passion for creating beautiful and functional websites.</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>Project Title 1</h3>
+            <p>Description of project 1.</p>
+        </div>
+        <div class="project">
+            <h3>Project Title 2</h3>
+            <p>Description of project 2.</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, please reach out via email.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 My Portfolio</p>
+    </footer>
+
+    <script>
+
+        // This file contains JavaScript code for interactivity in the portfolio project.
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const projectLinks = document.querySelectorAll('.project-link');
+
+            projectLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const projectId = this.getAttribute('data-project-id');
+                    showProjectDetails(projectId);
+                });
+            });
+
+            function showProjectDetails(projectId) {
+                const projectDetails = document.getElementById('project-details');
+                projectDetails.innerHTML = `<h2>Project ${projectId}</h2><p>Details about project ${projectId} go here.</p>`;
+                projectDetails.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
+</html>

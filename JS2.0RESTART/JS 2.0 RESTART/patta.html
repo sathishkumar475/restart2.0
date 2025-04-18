@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ares and Cent Calculation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Ares and Cent Calculation</h2>
+        <label for="ares">Ares:</label>
+        <input type="number" id="ares" placeholder="Enter ares">
+        
+        <label for="cents">Cents:</label>
+        <input type="number" id="cents" placeholder="Enter cents">
+        
+        <button onclick="calculate()">Calculate</button>
+        
+        <h3>Result:</h3>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function calculate() {
+            const ares = parseFloat(document.getElementById('ares').value) || 0;
+            const cents = parseFloat(document.getElementById('cents').value) || 0;
+            
+            const totalCents = (ares * 100) + cents;
+            const totalAres = totalCents / 100;
+            
+            document.getElementById('result').innerText = `Total: ${totalAres.toFixed(2)} ares (${totalCents.toFixed(2)} cents)`;
+        }
+    </script>
+</body>
+</html>
